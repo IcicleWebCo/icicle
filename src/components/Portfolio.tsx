@@ -10,7 +10,7 @@ const Portfolio: React.FC = () => {
     {
       title: "Lord Smith Lamps",
       description: "Built an e-commerce site with user authentication, shopping cart, stripe payments, newsletter subscription, shipping management, and site analytics.",
-      image: "/images/lordsmithhero.png",
+      image: "https://www.iciclewebco.com/images/lordsmithhero.png",
       tech: ["React", "TypeScript", "Stripe", "Supabase", "Vite", "Tailwind"],
       gradient: "from-purple-500/20 to-pink-500/20",
       siteUrl: "https://www.lordsmithlamps.com"
