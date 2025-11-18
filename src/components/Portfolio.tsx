@@ -18,7 +18,7 @@ const Portfolio: React.FC = () => {
     {
       title: "Eddy's Pizza and Subs",
       description: "Built an informational single page site with a robust customizable menu system",
-      image: "https://www.iciclewebco.com/images/eddyshero.png",
+      image: "./images/eddyshero.png",
       tech: ["React", "TypeScript", "Supabase", "Vite", "Tailwind"],
       gradient: "from-blue-500/20 to-cyan-500/20",
       siteUrl: "https://www.eddyspizzaandsubs.com"
