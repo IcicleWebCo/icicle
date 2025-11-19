@@ -107,7 +107,6 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-slate-400">
               <li>support@iciclewebco.com</li>
-              <li>+1 (509) 669-8539</li>
               <li>Wenatchee, WA</li>
             </ul>
           </div>
