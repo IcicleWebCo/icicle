@@ -35,8 +35,11 @@ const Hero: React.FC = () => {
 
         {/* Sub-headline */}
         <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-          Professional web development for small businesses nationwide. Custom websites, e-commerce solutions, 
+          Professional web development for small businesses nationwide. Custom websites, e-commerce solutions,
           APIs, and databases with flexible payment options, including no money down, to get your business online without upfront costs.
+          <span className="block mt-4">
+            <span className="text-highlight-new font-semibold">Now offering Social Media Management</span> to amplify your brand presence across all channels.
+          </span>
         </p>
 
         {/* CTA Buttons */}

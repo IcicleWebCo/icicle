@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Palette, ShoppingCart, Server, Shield, Headphones } from 'lucide-react';
+import { Code, Palette, ShoppingCart, Server, Shield, Headphones, Share2 } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -38,6 +38,18 @@ const Services: React.FC = () => {
       title: "Booking & Scheduling Systems",
       description: "Automated booking systems with calendar integration, payment processing, and customer management for service-based businesses.",
       color: "from-pink-500 to-rose-500"
+    },
+    {
+      icon: <Share2 className="h-8 w-8" />,
+      title: "Social Media Management",
+      description: "Comprehensive social media solutions to elevate your brand:",
+      color: "from-cyan-500 to-blue-500",
+      isNew: true,
+      bullets: [
+        "Content Strategy",
+        "Community Engagement",
+        "Analytics & Reporting"
+      ]
     }
   ];
 
@@ -59,8 +71,17 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:bg-slate-900/80 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl"
+              className={`group relative bg-slate-900/50 backdrop-blur-sm border rounded-xl p-8 hover:bg-slate-900/80 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl ${
+                service.isNew ? 'border-cyan-500/50 shadow-cyan-500/20 shadow-lg' : 'border-slate-700'
+              }`}
             >
+              {/* New Badge */}
+              {service.isNew && (
+                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                  NEW
+                </div>
+              )}
+
               {/* Icon with gradient background */}
               <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <div className="text-white">
@@ -69,12 +90,26 @@ const Services: React.FC = () => {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-white transition-colors">
+              <h3 className={`text-xl font-semibold mb-4 group-hover:text-white transition-colors ${
+                service.isNew ? 'text-highlight-new' : 'text-white'
+              }`}>
                 {service.title}
               </h3>
               <p className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
                 {service.description}
               </p>
+
+              {/* Bullets for new service */}
+              {service.bullets && (
+                <ul className="mt-4 space-y-2">
+                  {service.bullets.map((bullet, idx) => (
+                    <li key={idx} className="flex items-center text-slate-300">
+                      <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              )}
 
               {/* Hover gradient border */}
               <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-300`}></div>

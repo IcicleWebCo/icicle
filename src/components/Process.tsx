@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Palette, Code2, TestTube, Rocket, Headphones } from 'lucide-react';
+import { Search, Palette, Code2, TestTube, Rocket, Megaphone, Headphones } from 'lucide-react';
 
 const Process: React.FC = () => {
   const steps = [
@@ -32,6 +32,12 @@ const Process: React.FC = () => {
       title: "Launch",
       description: "Seamless deployment with performance optimization and monitoring setup.",
       color: "from-indigo-500 to-blue-500"
+    },
+    {
+      icon: <Megaphone className="h-6 w-6" />,
+      title: "Social Integration",
+      description: "We align your social channels with your new web presence for a cohesive brand voice and maximum reach.",
+      color: "from-cyan-500 to-blue-500"
     },
     {
       icon: <Headphones className="h-6 w-6" />,
