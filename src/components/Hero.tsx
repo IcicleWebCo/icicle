@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import GradientButton from './shared/GradientButton';
+import { scrollToSection } from '../utils/navigation';
+import { GRADIENTS } from '../constants/theme';
 
 const Hero: React.FC = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const handleContactClick = useCallback(() => scrollToSection('contact'), []);
+  const handlePortfolioClick = useCallback(() => scrollToSection('portfolio'), []);
 
   return (
     <section className="min-h-screen relative flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900/50 to-purple-900/50 overflow-hidden">
@@ -28,7 +27,7 @@ const Hero: React.FC = () => {
         {/* Main Headline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
           Custom Web Development
-          <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent block">
+          <span className={`bg-gradient-to-r ${GRADIENTS.textHero} bg-clip-text text-transparent block`}>
             For Growing Businesses
           </span>
         </h1>
@@ -42,24 +41,14 @@ const Hero: React.FC = () => {
           </span>
         </p>
 
-        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button
-            onClick={scrollToContact}
-            className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
-          >
-            <span className="flex items-center justify-center space-x-2">
-              <span>Start Your Project</span>
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </span>
-          </button>
-          
-          <button
-            onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-transparent border-2 border-slate-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-slate-400 hover:bg-slate-800/50 transition-all duration-300"
-          >
+          <GradientButton onClick={handleContactClick} icon={ArrowRight} className="shadow-xl hover:shadow-2xl">
+            Start Your Project
+          </GradientButton>
+
+          <GradientButton onClick={handlePortfolioClick} variant="secondary">
             View Our Work
-          </button>
+          </GradientButton>
         </div>
 
         {/* Stats */}

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Award, Users, Lightbulb, Heart } from 'lucide-react';
+import ValueCard from './shared/ValueCard';
+import { ValueCard as ValueCardType } from '../types';
 
 const About: React.FC = () => {
-  const values = [
+  const values: ValueCardType[] = useMemo(() => [
     {
       icon: <Award className="h-6 w-6" />,
       title: "Excellence",
@@ -23,7 +25,7 @@ const About: React.FC = () => {
       title: "Passion",
       description: "We love what we do, and it shows in every project we deliver."
     }
-  ];
+  ], []);
 
   return (
     <section id="about" className="py-20 bg-slate-900">
@@ -60,27 +62,9 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Values Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {values.map((value, index) => (
-              <div
-                key={index}
-                className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/80 transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-white">
-                      {value.icon}
-                    </div>
-                  </div>
-                </div>
-                <h4 className="text-lg font-semibold text-white mb-3">
-                  {value.title}
-                </h4>
-                <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300 transition-colors">
-                  {value.description}
-                </p>
-              </div>
+              <ValueCard key={index} value={value} />
             ))}
           </div>
         </div>

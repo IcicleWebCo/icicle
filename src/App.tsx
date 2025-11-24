@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { supabase } from './lib/supabase';
 import { User } from '@supabase/supabase-js';
 import Navbar from './components/Navbar';
@@ -9,8 +9,10 @@ import Process from './components/Process';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Dashboard from './components/Dashboard';
-import AuthModal from './components/AuthModal';
+import LoadingSpinner from './components/shared/LoadingSpinner';
+
+const Dashboard = lazy(() => import('./components/Dashboard'));
+const AuthModal = lazy(() => import('./components/AuthModal'));
 
 function App() {
   const [user, setUser] = useState<User | null>(null);
@@ -25,11 +27,13 @@ function App() {
       setLoading(false);
     });
 
-    // Listen for auth changes
+    // Listen for auth changes (using async block pattern)
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (_event, session) => {
-        setUser(session?.user ?? null);
-        setLoading(false);
+        (async () => {
+          setUser(session?.user ?? null);
+          setLoading(false);
+        })();
       }
     );
 
@@ -44,13 +48,21 @@ function App() {
   if (loading) {
     return (
       <div className="min-h-screen bg-slate-900 flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+        <LoadingSpinner size="md" />
       </div>
     );
   }
 
   if (showDashboard && user) {
-    return <Dashboard user={user} onSignOut={handleSignOut} onBack={() => setShowDashboard(false)} />;
+    return (
+      <Suspense fallback={
+        <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+          <LoadingSpinner size="md" />
+        </div>
+      }>
+        <Dashboard user={user} onSignOut={handleSignOut} onBack={() => setShowDashboard(false)} />
+      </Suspense>
+    );
   }
 
   return (
@@ -70,7 +82,9 @@ function App() {
       <Footer />
       
       {showAuth && (
-        <AuthModal onClose={() => setShowAuth(false)} />
+        <Suspense fallback={null}>
+          <AuthModal onClose={() => setShowAuth(false)} />
+        </Suspense>
       )}
     </div>
   );
