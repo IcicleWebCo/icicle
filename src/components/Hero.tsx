@@ -17,7 +17,6 @@ const Hero: React.FC = () => {
     return Array.from({ length: FEATURE_FLAGS.snowflakeCount }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
-      animationDelay: 0,
       animationDuration: 10 + Math.random() * 20,
       size: 10 + Math.random() * 20,
       opacity: 0.3 + Math.random() * 0.7,
@@ -33,7 +32,6 @@ const Hero: React.FC = () => {
             <Snowflake
               key={flake.id}
               left={flake.left}
-              animationDelay={flake.animationDelay}
               animationDuration={flake.animationDuration}
               size={flake.size}
               opacity={flake.opacity}
