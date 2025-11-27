@@ -7,3 +7,17 @@
     @apply bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent;
   }
 }
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+.snowflake {
+  animation: fall linear infinite;
+  top: -10%;
+}

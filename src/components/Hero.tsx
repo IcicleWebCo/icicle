@@ -1,15 +1,46 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import GradientButton from './shared/GradientButton';
+import Snowflake from './Hero/Snowflake';
 import { scrollToSection } from '../utils/navigation';
 import { GRADIENTS } from '../constants/theme';
+import { FEATURE_FLAGS } from '../config/features';
 
 const Hero: React.FC = () => {
   const handleContactClick = useCallback(() => scrollToSection('contact'), []);
   const handlePortfolioClick = useCallback(() => scrollToSection('portfolio'), []);
 
+  const snowflakes = useMemo(() => {
+    if (!FEATURE_FLAGS.enableSnowflakes) return [];
+
+    return Array.from({ length: FEATURE_FLAGS.snowflakeCount }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      animationDelay: Math.random() * 10,
+      animationDuration: 10 + Math.random() * 20,
+      size: 10 + Math.random() * 20,
+      opacity: 0.3 + Math.random() * 0.7,
+    }));
+  }, []);
+
   return (
     <section className="min-h-screen relative flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900/50 to-purple-900/50 overflow-hidden">
+      {/* Snowflakes */}
+      {FEATURE_FLAGS.enableSnowflakes && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {snowflakes.map((flake) => (
+            <Snowflake
+              key={flake.id}
+              left={flake.left}
+              animationDelay={flake.animationDelay}
+              animationDuration={flake.animationDuration}
+              size={flake.size}
+              opacity={flake.opacity}
+            />
+          ))}
+        </div>
+      )}
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
