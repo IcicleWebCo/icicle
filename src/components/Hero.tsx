@@ -62,10 +62,10 @@ const Hero: React.FC = () => {
         )}
 
         {/* Badge */}
-        <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 rounded-full px-6 py-2 mb-8 backdrop-blur-sm">
+        {/*<div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 rounded-full px-6 py-2 mb-8 backdrop-blur-sm">
           <Sparkles className="h-4 w-4 text-blue-400" />
           <span className="text-blue-200 font-medium">Transforming Ideas into Digital Realities</span>
-        </div>
+        </div> */}
 
         {/* Main Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
