@@ -42,15 +42,30 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/profile.php?id=61581756293240"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Facebook"
                 className="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors"
               >
-                <span className="text-white font-semibold">f</span>
+                <span className="text-white font-semibold" aria-hidden="true">f</span>
+              </a>
+              <a
+                href="https://www.instagram.com/iciclewebco/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on Instagram"
+                className="w-10 h-10 bg-slate-800 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors"
+              >
+                <span className="text-white font-semibold" aria-hidden="true">ig</span>
               </a>
               <a
                 href="https://www.linkedin.com/company/icicle-web-co"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow us on LinkedIn"
                 className="w-10 h-10 bg-slate-800 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors"
               >
-                <span className="text-white font-semibold">in</span>
+                <span className="text-white font-semibold" aria-hidden="true">in</span>
               </a>
             </div>
           </div>

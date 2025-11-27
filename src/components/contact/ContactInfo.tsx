@@ -57,6 +57,15 @@ const ContactInfo: React.FC = () => {
             <span className="text-white font-semibold">f</span>
           </a>
           <a
+            href="https://www.instagram.com/iciclewebco/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow us on Instagram"
+            className="w-10 h-10 bg-slate-700 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors"
+          >
+            <span className="text-white font-semibold">ig</span>
+          </a>
+          <a
             href="https://www.linkedin.com/company/icicle-web-co"
             target="_blank"
             rel="noopener noreferrer"
