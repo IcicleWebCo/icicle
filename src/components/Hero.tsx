@@ -9,6 +9,7 @@ import { FEATURE_FLAGS } from '../config/features';
 const Hero: React.FC = () => {
   const handleContactClick = useCallback(() => scrollToSection('contact'), []);
   const handlePortfolioClick = useCallback(() => scrollToSection('portfolio'), []);
+  const handleSpecialsClick = useCallback(() => scrollToSection('specials'), []);
 
   const snowflakes = useMemo(() => {
     if (!FEATURE_FLAGS.enableSnowflakes) return [];
@@ -49,6 +50,17 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Limited Time Offer Banner */}
+        {FEATURE_FLAGS.enableSpecials && (
+          <button
+            onClick={handleSpecialsClick}
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-full px-6 py-2 mb-6 backdrop-blur-sm hover:from-emerald-500/30 hover:to-cyan-500/30 transition-all duration-300 cursor-pointer group"
+          >
+            <Sparkles className="h-4 w-4 text-emerald-400 group-hover:scale-110 transition-transform" />
+            <span className="text-emerald-200 font-semibold">Limited Time Offer: Get 40% Off!</span>
+          </button>
+        )}
+
         {/* Badge */}
         <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 rounded-full px-6 py-2 mb-8 backdrop-blur-sm">
           <Sparkles className="h-4 w-4 text-blue-400" />
