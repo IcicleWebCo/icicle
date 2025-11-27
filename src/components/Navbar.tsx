@@ -29,15 +29,19 @@ const Navbar: React.FC<NavbarProps> = ({ user, onAuthClick, onDashboardClick, on
     <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-md border-b border-slate-800 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo
-          <img id="logo" src="./images/IcicleLogoTransparent.svg" alt="Icicle Logo" class="w-auto h-16"/>
-          */}
           <div className="flex-shrink-0">
             <button
               onClick={scrollToTop}
-              className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:from-blue-300 hover:to-purple-300 transition-all duration-200"
+              className="flex items-center gap-2 group transition-all duration-200"
             >
-              icicle web co.
+              <img
+                src="/images/IcicleLogoTransparent.svg"
+                alt="Icicle Logo"
+                className="h-8 w-auto sm:h-10 md:h-12 group-hover:scale-105 transition-transform duration-200"
+              />
+              <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent group-hover:from-blue-300 group-hover:to-purple-300 transition-all duration-200">
+                icicle web co.
+              </span>
             </button>
           </div>
 
