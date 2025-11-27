@@ -3,6 +3,7 @@ import { supabase } from './lib/supabase';
 import { User } from '@supabase/supabase-js';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Specials from './components/Specials';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Process from './components/Process';
@@ -10,6 +11,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/shared/LoadingSpinner';
+import { FEATURE_FLAGS } from './config/features';
 
 const Dashboard = lazy(() => import('./components/Dashboard'));
 const AuthModal = lazy(() => import('./components/AuthModal'));
@@ -67,13 +69,14 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-900">
-      <Navbar 
-        user={user} 
+      <Navbar
+        user={user}
         onAuthClick={() => setShowAuth(true)}
         onDashboardClick={() => setShowDashboard(true)}
         onSignOut={handleSignOut}
       />
       <Hero />
+      {FEATURE_FLAGS.enableSpecials && <Specials />}
       <Services />
       <Portfolio />
       <Process />
