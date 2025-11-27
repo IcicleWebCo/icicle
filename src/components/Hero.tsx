@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
           Custom Web Development
           <span className={`bg-gradient-to-r ${GRADIENTS.textHero} bg-clip-text text-transparent block`}>
             For Growing Businesses
