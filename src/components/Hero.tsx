@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-full px-6 py-2 mb-6 backdrop-blur-sm hover:from-emerald-500/30 hover:to-cyan-500/30 transition-all duration-300 cursor-pointer group"
           >
             <Sparkles className="h-4 w-4 text-emerald-400 group-hover:scale-110 transition-transform" />
-            <span className="text-emerald-200 font-semibold">Limited Time Offer: Get 40% Off!</span>
+            <span className="text-emerald-200 font-semibold">Limited Time Offer: Get 10% Off!</span>
           </button>
         )}
 
