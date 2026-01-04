@@ -56,7 +56,7 @@ export const portfolioProjects: PortfolioProject[] = [
     subtitle: 'Restaurant Information Site',
     clientName: "Eddy's Pizza and Subs",
     industry: 'Food & Beverage',
-    projectDate: '2024',
+    projectDate: '2025',
     challenge: "Eddy's Pizza needed a modern, mobile-friendly website to showcase their menu, provide essential business information, and make it easy for customers to find them and place orders.",
     solution: 'Created a sleek single-page application with a dynamic, customizable menu system that the owner can update easily. The site features responsive design optimized for mobile ordering, integrated location map, and clear call-to-action for phone orders.',
     heroImage: '/images/eddyshero.png',
