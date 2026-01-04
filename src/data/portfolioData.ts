@@ -48,13 +48,7 @@ export const portfolioProjects: PortfolioProject[] = [
     liveUrl: 'https://www.lordsmithlamps.com',
     featured: true,
     category: 'ecommerce',
-    gradient: 'from-amber-500/20 to-orange-500/20',
-    testimonial: {
-      clientName: '',
-      clientRole: '',
-      text: '',
-      rating: 5
-    }
+    gradient: 'from-amber-500/20 to-orange-500/20'
   },
   {
     id: 'eddys-pizza',
@@ -100,13 +94,7 @@ export const portfolioProjects: PortfolioProject[] = [
     liveUrl: 'https://www.homesteadhaul.com',
     featured: true,
     category: 'custom',
-    gradient: 'from-green-500/20 to-emerald-500/20',
-    testimonial: {
-      clientName: 'Sarah Johnson',
-      clientRole: 'CEO, Homestead Haul',
-      text: 'This platform transformed our business. We went from manual spreadsheets to a fully automated system that handles hundreds of orders daily.',
-      rating: 5
-    }
+    gradient: 'from-green-500/20 to-emerald-500/20'
   },
   {
     id: 'iron-horse-rv',
