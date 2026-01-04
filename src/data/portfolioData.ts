@@ -50,9 +50,9 @@ export const portfolioProjects: PortfolioProject[] = [
     category: 'ecommerce',
     gradient: 'from-amber-500/20 to-orange-500/20',
     testimonial: {
-      clientName: 'John Smith',
-      clientRole: 'Founder, Lord Smith Lamps',
-      text: 'The website exceeded our expectations. Sales have increased significantly since launch, and customers love the easy checkout process.',
+      clientName: '',
+      clientRole: '',
+      text: '',
       rating: 5
     }
   },
