@@ -180,30 +180,6 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
             </div>
           </div>
 
-          {project.metrics && project.metrics.length > 0 && (
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold text-white mb-6 text-center">Project Impact</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {project.metrics.map((metric, index) => {
-                  const IconComponent = iconMap[metric.icon] || Star;
-                  return (
-                    <div
-                      key={index}
-                      className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all"
-                    >
-                      <IconComponent className="h-8 w-8 mx-auto mb-3 text-blue-400" />
-                      <div className="text-3xl font-bold text-white mb-1">
-                        {metric.value}
-                        <span className="text-xl text-slate-400">{metric.unit}</span>
-                      </div>
-                      <div className="text-sm text-slate-400">{metric.name}</div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
           {project.testimonial && (
             <div className="mb-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/30 rounded-xl p-8">
               <div className="flex items-center gap-1 mb-4">

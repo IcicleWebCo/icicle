@@ -23,13 +23,6 @@ export interface Project {
   siteUrl: string;
 }
 
-export interface ProjectMetric {
-  name: string;
-  value: string;
-  unit: string;
-  icon: string;
-}
-
 export interface ProjectTestimonial {
   clientName: string;
   clientRole: string;
@@ -54,7 +47,6 @@ export interface PortfolioProject {
   liveUrl: string;
   featured: boolean;
   category: 'ecommerce' | 'booking' | 'informational' | 'custom';
-  metrics: ProjectMetric[];
   testimonial?: ProjectTestimonial;
   gradient: string;
 }

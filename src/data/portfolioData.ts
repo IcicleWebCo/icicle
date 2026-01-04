@@ -1,10 +1,3 @@
-export interface ProjectMetric {
-  name: string;
-  value: string;
-  unit: string;
-  icon: string;
-}
-
 export interface ProjectTestimonial {
   clientName: string;
   clientRole: string;
@@ -29,7 +22,6 @@ export interface PortfolioProject {
   liveUrl: string;
   featured: boolean;
   category: 'ecommerce' | 'booking' | 'informational' | 'custom';
-  metrics: ProjectMetric[];
   testimonial?: ProjectTestimonial;
   gradient: string;
 }
@@ -57,12 +49,6 @@ export const portfolioProjects: PortfolioProject[] = [
     featured: true,
     category: 'ecommerce',
     gradient: 'from-amber-500/20 to-orange-500/20',
-    metrics: [
-      { name: 'Conversion Rate', value: '3.2', unit: '%', icon: 'TrendingUp' },
-      { name: 'Page Load Time', value: '1.2', unit: 's', icon: 'Zap' },
-      { name: 'Products Listed', value: '150', unit: '+', icon: 'Package' },
-      { name: 'Customer Satisfaction', value: '4.8', unit: '/5', icon: 'Star' }
-    ],
     testimonial: {
       clientName: 'John Smith',
       clientRole: 'Founder, Lord Smith Lamps',
@@ -92,12 +78,6 @@ export const portfolioProjects: PortfolioProject[] = [
     featured: true,
     category: 'informational',
     gradient: 'from-red-500/20 to-orange-500/20',
-    metrics: [
-      { name: 'Mobile Traffic', value: '78', unit: '%', icon: 'Smartphone' },
-      { name: 'Menu Updates', value: 'Real-time', unit: '', icon: 'RefreshCw' },
-      { name: 'Load Speed', value: '0.9', unit: 's', icon: 'Zap' },
-      { name: 'Customer Engagement', value: '4.6', unit: '/5', icon: 'Heart' }
-    ],
     testimonial: {
       clientName: 'Eddie Patterson',
       clientRole: "Owner, Eddy's Pizza and Subs",
@@ -127,12 +107,6 @@ export const portfolioProjects: PortfolioProject[] = [
     featured: true,
     category: 'custom',
     gradient: 'from-green-500/20 to-emerald-500/20',
-    metrics: [
-      { name: 'Daily Orders', value: '200', unit: '+', icon: 'ShoppingBag' },
-      { name: 'User Accounts', value: '500', unit: '+', icon: 'Users' },
-      { name: 'Delivery Efficiency', value: '95', unit: '%', icon: 'Truck' },
-      { name: 'Revenue Growth', value: '180', unit: '%', icon: 'TrendingUp' }
-    ],
     testimonial: {
       clientName: 'Sarah Johnson',
       clientRole: 'CEO, Homestead Haul',
@@ -161,13 +135,7 @@ export const portfolioProjects: PortfolioProject[] = [
     liveUrl: 'https://ironhorserv.com',
     featured: false,
     category: 'booking',
-    gradient: 'from-blue-500/20 to-cyan-500/20',
-    metrics: [
-      { name: 'Bookings per Month', value: '150', unit: '+', icon: 'Calendar' },
-      { name: 'Booking Time Saved', value: '70', unit: '%', icon: 'Clock' },
-      { name: 'Customer Retention', value: '85', unit: '%', icon: 'UserCheck' },
-      { name: 'Revenue Increase', value: '120', unit: '%', icon: 'DollarSign' }
-    ]
+    gradient: 'from-blue-500/20 to-cyan-500/20'
   },
   {
     id: 'riverstone-detailing',
@@ -190,13 +158,7 @@ export const portfolioProjects: PortfolioProject[] = [
     liveUrl: 'https://riverstonedetailing.com',
     featured: false,
     category: 'booking',
-    gradient: 'from-slate-500/20 to-gray-500/20',
-    metrics: [
-      { name: 'Booking Automation', value: '100', unit: '%', icon: 'CheckCircle' },
-      { name: 'Admin Time Saved', value: '15', unit: 'hrs/week', icon: 'Clock' },
-      { name: 'Booking Increase', value: '45', unit: '%', icon: 'TrendingUp' },
-      { name: 'Customer Satisfaction', value: '4.9', unit: '/5', icon: 'Star' }
-    ]
+    gradient: 'from-slate-500/20 to-gray-500/20'
   }
 ];
 
