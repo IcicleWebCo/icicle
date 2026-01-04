@@ -23,14 +23,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails }) => 
         </div>
       )}
 
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-64 overflow-hidden bg-slate-900">
         <img
           src={project.heroImage}
           alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-contain"
           loading="lazy"
         />
-        <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} mix-blend-overlay`}></div>
+        <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} mix-blend-overlay pointer-events-none`}></div>
       </div>
 
       <div className="p-6">
