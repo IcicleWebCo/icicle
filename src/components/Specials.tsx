@@ -25,7 +25,7 @@ const Specials: React.FC = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-center mb-6">
             <span className="text-white">Start 2026 Strong:</span>
             <span className="block mt-2 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-              40% Off Your New Digital Presence
+              10% Off Your New Digital Presence
             </span>
           </h2>
 
@@ -35,8 +35,8 @@ const Specials: React.FC = () => {
             </p>
 
             <p className="text-lg text-slate-300 leading-relaxed mb-6">
-              Icicle Web Co. is offering our biggest discount ever:{' '}
-              <span className="font-bold text-emerald-400">40% OFF</span> all web development services.
+              For a limited time:{' '}
+              <span className="font-bold text-emerald-400">10% OFF</span> all web development services.
             </p>
 
             <p className="text-lg text-slate-300 leading-relaxed mb-10">
@@ -53,13 +53,13 @@ const Specials: React.FC = () => {
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3"></div>
                   <span className="text-slate-300">
-                    <span className="font-semibold text-white">40% off</span> total project cost
+                    <span className="font-semibold text-white">10% off</span> total project cost
                   </span>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3"></div>
                   <span className="text-slate-300">
-                    Valid on proposals <span className="font-semibold text-white">signed before December 31st</span>
+                    Valid on proposals <span className="font-semibold text-white">signed before February 1st</span>
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -72,7 +72,7 @@ const Specials: React.FC = () => {
             </div>
 
             <p className="text-lg text-slate-300 leading-relaxed mb-8 text-center">
-              Don't let your remaining 2025 budget go to waste. Let's build something incredible together.
+              Happy New Year! Let's build something incredible together.
             </p>
 
             <div className="flex justify-center">
@@ -81,7 +81,7 @@ const Specials: React.FC = () => {
                 icon={Clock}
                 className="text-lg px-8 py-4 shadow-xl hover:shadow-2xl"
               >
-                Claim Your 40% Discount
+                Claim Your 10% Discount
               </GradientButton>
             </div>
           </div>
