@@ -42,7 +42,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/lordsmithhero.png', caption: 'Product Catalog', alt: 'Product listing page' },
       { url: '/images/lordsmithhero.png', caption: 'Shopping Cart', alt: 'Shopping cart interface' }
     ],
-    priceRange: '$1,000',
+    priceRange: '$750 - $1000',
     projectDuration: '3 weeks',
     techStack: ['React', 'TypeScript', 'Stripe', 'Supabase', 'Vite', 'Tailwind CSS'],
     liveUrl: 'https://www.lordsmithlamps.com',
@@ -65,7 +65,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/eddyshero.png', caption: 'Menu System', alt: 'Interactive menu display' },
       { url: '/images/eddyshero.png', caption: 'Mobile View', alt: 'Mobile responsive design' }
     ],
-    priceRange: '$250',
+    priceRange: '$200 - $400',
     projectDuration: '1 week',
     techStack: ['React', 'TypeScript', 'Supabase', 'Vite', 'Tailwind CSS'],
     liveUrl: 'https://www.eddyspizzaandsubs.com',
@@ -88,7 +88,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/HomesteadHaul.png', caption: 'Scheduling Interface', alt: 'Delivery scheduling system' },
       { url: '/images/HomesteadHaul.png', caption: 'Inventory Management', alt: 'Inventory tracking dashboard' }
     ],
-    priceRange: '$1000',
+    priceRange: '$1000 - $2000',
     projectDuration: '3 weeks',
     techStack: ['React', 'TypeScript', 'Stripe', 'Supabase', 'Vite', 'Tailwind CSS'],
     liveUrl: 'https://www.homesteadhaul.com',
@@ -134,7 +134,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/Riverstone.png', caption: 'Service Selection', alt: 'Service packages display' },
       { url: '/images/Riverstone.png', caption: 'Payment Flow', alt: 'Checkout process' }
     ],
-    priceRange: '$750',
+    priceRange: '$500 - $750',
     projectDuration: '2 weeks',
     techStack: ['Squarespace', 'JavaScript', 'Acuity Scheduling'],
     liveUrl: 'https://riverstonedetailing.com',
