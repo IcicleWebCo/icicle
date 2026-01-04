@@ -77,13 +77,7 @@ export const portfolioProjects: PortfolioProject[] = [
     liveUrl: 'https://www.eddyspizzaandsubs.com',
     featured: true,
     category: 'informational',
-    gradient: 'from-red-500/20 to-orange-500/20',
-    testimonial: {
-      clientName: 'Eddie Patterson',
-      clientRole: "Owner, Eddy's Pizza and Subs",
-      text: 'Our new website has brought in so many new customers. People love being able to see our full menu on their phones before they call.',
-      rating: 5
-    }
+    gradient: 'from-red-500/20 to-orange-500/20'
   },
   {
     id: 'homestead-haul',
