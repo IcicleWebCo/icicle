@@ -1,5 +1,5 @@
 export const FEATURE_FLAGS = {
-  enableSnowflakes: true,
+  enableSnowflakes: false,
   snowflakeCount: 50,
   enableSpecials: true,
 } as const;
