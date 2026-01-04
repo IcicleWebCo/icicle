@@ -50,8 +50,8 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/lordsmithhero.png', caption: 'Product Catalog', alt: 'Product listing page' },
       { url: '/images/lordsmithhero.png', caption: 'Shopping Cart', alt: 'Shopping cart interface' }
     ],
-    priceRange: '$8,000 - $12,000',
-    projectDuration: '8 weeks',
+    priceRange: '$1,000',
+    projectDuration: '2 weeks',
     techStack: ['React', 'TypeScript', 'Stripe', 'Supabase', 'Vite', 'Tailwind CSS'],
     liveUrl: 'https://www.lordsmithlamps.com',
     featured: true,
