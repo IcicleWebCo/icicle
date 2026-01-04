@@ -155,7 +155,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/IronHorse.png', caption: 'Site Map Selection', alt: 'Interactive map with Google Maps' },
       { url: '/images/IronHorse.png', caption: 'Guest Dashboard', alt: 'User account management' }
     ],
-    priceRange: '$10,000 - $15,000',
+    priceRange: '$250',
     projectDuration: '10 weeks',
     techStack: ['React', 'TypeScript', 'Stripe', 'Supabase', 'Google Maps API', 'Vite', 'Tailwind CSS'],
     liveUrl: 'https://ironhorserv.com',
