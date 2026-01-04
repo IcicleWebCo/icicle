@@ -82,11 +82,11 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
         <div className="p-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
             <div className="lg:col-span-2">
-              <div className="relative rounded-xl overflow-hidden mb-4 bg-slate-800 group">
+              <div className="relative rounded-xl overflow-hidden mb-4 bg-slate-900 group">
                 <img
                   src={project.galleryImages[selectedImage].url}
                   alt={project.galleryImages[selectedImage].alt}
-                  className="w-full h-[400px] object-cover"
+                  className="w-full h-[400px] object-contain"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                   <p className="text-white text-sm">{project.galleryImages[selectedImage].caption}</p>
@@ -98,7 +98,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
                   <button
                     key={index}
                     onClick={() => setSelectedImage(index)}
-                    className={`relative rounded-lg overflow-hidden border-2 transition-all ${
+                    className={`relative rounded-lg overflow-hidden border-2 transition-all bg-slate-900 ${
                       selectedImage === index
                         ? 'border-blue-500 ring-2 ring-blue-500/50'
                         : 'border-slate-700 hover:border-slate-500'
@@ -107,7 +107,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
                     <img
                       src={img.url}
                       alt={img.alt}
-                      className="w-full h-20 object-cover"
+                      className="w-full h-20 object-contain"
                     />
                   </button>
                 ))}
