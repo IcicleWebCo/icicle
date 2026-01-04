@@ -33,7 +33,7 @@ export const portfolioProjects: PortfolioProject[] = [
     subtitle: 'Luxury E-commerce Platform',
     clientName: 'Lord Smith Lamps',
     industry: 'E-commerce / Retail',
-    projectDate: '2024',
+    projectDate: '2025',
     challenge: 'Lord Smith Lamps needed a sophisticated e-commerce platform to sell premium lighting products online with secure payment processing, inventory management, and customer account features.',
     solution: 'Built a full-featured e-commerce site with Stripe integration for payments, Supabase for user authentication and data management, newsletter subscriptions, shipping management, and comprehensive analytics. The platform provides a seamless shopping experience with robust admin capabilities.',
     heroImage: '/images/lordsmithhero.png',
