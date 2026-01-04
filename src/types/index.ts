@@ -23,6 +23,42 @@ export interface Project {
   siteUrl: string;
 }
 
+export interface ProjectMetric {
+  name: string;
+  value: string;
+  unit: string;
+  icon: string;
+}
+
+export interface ProjectTestimonial {
+  clientName: string;
+  clientRole: string;
+  text: string;
+  rating: number;
+}
+
+export interface PortfolioProject {
+  id: string;
+  title: string;
+  subtitle: string;
+  clientName: string;
+  industry: string;
+  projectDate: string;
+  challenge: string;
+  solution: string;
+  heroImage: string;
+  galleryImages: Array<{ url: string; caption: string; alt: string }>;
+  priceRange: string;
+  projectDuration: string;
+  techStack: string[];
+  liveUrl: string;
+  featured: boolean;
+  category: 'ecommerce' | 'booking' | 'informational' | 'custom';
+  metrics: ProjectMetric[];
+  testimonial?: ProjectTestimonial;
+  gradient: string;
+}
+
 export interface ValueCard {
   icon: React.ReactNode;
   title: string;
