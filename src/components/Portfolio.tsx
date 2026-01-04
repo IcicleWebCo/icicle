@@ -4,7 +4,6 @@ import { portfolioProjects, priceRanges } from '../data/portfolioData';
 import { PortfolioProject } from '../types';
 import ProjectCard from './portfolio/ProjectCard';
 import ProjectDetailModal from './portfolio/ProjectDetailModal';
-import PortfolioFilters from './portfolio/PortfolioFilters';
 import EmptyState from './portfolio/EmptyState';
 
 const Portfolio: React.FC = () => {
@@ -106,21 +105,6 @@ const Portfolio: React.FC = () => {
           <p className="text-xl text-slate-400 max-w-3xl mx-auto">
             Explore our collection of successful projects, from e-commerce platforms to custom web applications. Each project demonstrates our commitment to quality, innovation, and client satisfaction.
           </p>
-        </div>
-
-        <div className={`mb-12 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <PortfolioFilters
-            selectedCategory={selectedCategory}
-            selectedPriceRange={selectedPriceRange}
-            selectedIndustry={selectedIndustry}
-            selectedSort={selectedSort}
-            onCategoryChange={setSelectedCategory}
-            onPriceRangeChange={setSelectedPriceRange}
-            onIndustryChange={setSelectedIndustry}
-            onSortChange={setSelectedSort}
-            onClearFilters={handleClearFilters}
-            hasActiveFilters={hasActiveFilters}
-          />
         </div>
 
         {filteredAndSortedProjects.length === 0 ? (
