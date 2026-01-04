@@ -184,7 +184,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/Riverstone.png', caption: 'Service Selection', alt: 'Service packages display' },
       { url: '/images/Riverstone.png', caption: 'Payment Flow', alt: 'Checkout process' }
     ],
-    priceRange: '$4,000 - $6,000',
+    priceRange: '$750',
     projectDuration: '5 weeks',
     techStack: ['Squarespace', 'JavaScript', 'Acuity Scheduling'],
     liveUrl: 'https://riverstonedetailing.com',
