@@ -51,7 +51,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/lordsmithhero.png', caption: 'Shopping Cart', alt: 'Shopping cart interface' }
     ],
     priceRange: '$1,000',
-    projectDuration: '2 weeks',
+    projectDuration: '3 weeks',
     techStack: ['React', 'TypeScript', 'Stripe', 'Supabase', 'Vite', 'Tailwind CSS'],
     liveUrl: 'https://www.lordsmithlamps.com',
     featured: true,
@@ -86,7 +86,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/eddyshero.png', caption: 'Mobile View', alt: 'Mobile responsive design' }
     ],
     priceRange: '$250',
-    projectDuration: '4 weeks',
+    projectDuration: '1 week',
     techStack: ['React', 'TypeScript', 'Supabase', 'Vite', 'Tailwind CSS'],
     liveUrl: 'https://www.eddyspizzaandsubs.com',
     featured: true,
@@ -121,7 +121,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/HomesteadHaul.png', caption: 'Inventory Management', alt: 'Inventory tracking dashboard' }
     ],
     priceRange: '$1000',
-    projectDuration: '12 weeks',
+    projectDuration: '3 weeks',
     techStack: ['React', 'TypeScript', 'Stripe', 'Supabase', 'Vite', 'Tailwind CSS'],
     liveUrl: 'https://www.homesteadhaul.com',
     featured: true,
@@ -156,7 +156,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/IronHorse.png', caption: 'Guest Dashboard', alt: 'User account management' }
     ],
     priceRange: '$250',
-    projectDuration: '10 weeks',
+    projectDuration: '1 weeks',
     techStack: ['React', 'TypeScript', 'Stripe', 'Supabase', 'Google Maps API', 'Vite', 'Tailwind CSS'],
     liveUrl: 'https://ironhorserv.com',
     featured: false,
@@ -185,7 +185,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/Riverstone.png', caption: 'Payment Flow', alt: 'Checkout process' }
     ],
     priceRange: '$750',
-    projectDuration: '5 weeks',
+    projectDuration: '2 weeks',
     techStack: ['Squarespace', 'JavaScript', 'Acuity Scheduling'],
     liveUrl: 'https://riverstonedetailing.com',
     featured: false,
