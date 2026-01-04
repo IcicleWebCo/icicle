@@ -35,7 +35,7 @@ const Specials: React.FC = () => {
             </p>
 
             <p className="text-lg text-slate-300 leading-relaxed mb-6">
-              To celebrate Black Friday and the holiday season, Icicle Web Co. is offering our biggest discount ever:{' '}
+              Icicle Web Co. is offering our biggest discount ever:{' '}
               <span className="font-bold text-emerald-400">40% OFF</span> all web development services.
             </p>
 
