@@ -85,7 +85,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/eddyshero.png', caption: 'Menu System', alt: 'Interactive menu display' },
       { url: '/images/eddyshero.png', caption: 'Mobile View', alt: 'Mobile responsive design' }
     ],
-    priceRange: '$3,000 - $5,000',
+    priceRange: '$250',
     projectDuration: '4 weeks',
     techStack: ['React', 'TypeScript', 'Supabase', 'Vite', 'Tailwind CSS'],
     liveUrl: 'https://www.eddyspizzaandsubs.com',
@@ -120,7 +120,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { url: '/images/HomesteadHaul.png', caption: 'Scheduling Interface', alt: 'Delivery scheduling system' },
       { url: '/images/HomesteadHaul.png', caption: 'Inventory Management', alt: 'Inventory tracking dashboard' }
     ],
-    priceRange: '$12,000 - $18,000',
+    priceRange: '$1000',
     projectDuration: '12 weeks',
     techStack: ['React', 'TypeScript', 'Stripe', 'Supabase', 'Vite', 'Tailwind CSS'],
     liveUrl: 'https://www.homesteadhaul.com',
