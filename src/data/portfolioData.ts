@@ -38,9 +38,9 @@ export const portfolioProjects: PortfolioProject[] = [
     solution: 'Built a full-featured e-commerce site with Stripe integration for payments, Supabase for user authentication and data management, newsletter subscriptions, shipping management, and comprehensive analytics. The platform provides a seamless shopping experience with robust admin capabilities.',
     heroImage: '/images/lordsmithhero.png',
     galleryImages: [
-      { url: '/images/lordsmithhero.png', caption: 'Homepage Hero Section', alt: 'Lord Smith Lamps homepage' },
-      { url: '/images/lordsmithhero.png', caption: 'Product Catalog', alt: 'Product listing page' },
-      { url: '/images/lordsmithhero.png', caption: 'Shopping Cart', alt: 'Shopping cart interface' }
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/lordsmithlamps/Hero.png', caption: 'Homepage Hero Section', alt: 'Lord Smith Lamps homepage' },
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/lordsmithlamps/Admin.png', caption: 'Admin Area', alt: 'Admin Area' },
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/lordsmithlamps/Shop.png', caption: 'Products', alt: 'Products' }
     ],
     priceRange: '$750 - $1000',
     projectDuration: '3 weeks',
