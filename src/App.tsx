@@ -8,6 +8,7 @@ import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Process from './components/Process';
 import About from './components/About';
+import Reviews from './components/Reviews';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/shared/LoadingSpinner';
@@ -81,6 +82,7 @@ function App() {
       <Portfolio />
       <Process />
       <About />
+      <Reviews />
       <Contact />
       <Footer />
       

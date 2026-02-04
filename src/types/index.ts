@@ -68,3 +68,25 @@ export interface AuthFormData {
   password: string;
   name: string;
 }
+
+export interface Review {
+  id: string;
+  google_review_id: string;
+  author_name: string;
+  author_photo_url: string | null;
+  rating: number;
+  text: string | null;
+  time: number;
+  relative_time_description: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ReviewSettings {
+  id: string;
+  place_id: string;
+  last_sync: string;
+  total_reviews: number;
+  average_rating: number;
+  updated_at: string;
+}

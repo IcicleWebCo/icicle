@@ -60,6 +60,9 @@ const Navbar: React.FC<NavbarProps> = ({ user, onAuthClick, onDashboardClick, on
               <button onClick={() => scrollToSection('about')} className="text-slate-300 hover:text-white transition-colors px-3 py-2">
                 About
               </button>
+              <button onClick={() => scrollToSection('reviews')} className="text-slate-300 hover:text-white transition-colors px-3 py-2">
+                Reviews
+              </button>
               <button onClick={() => scrollToSection('contact')} className="text-slate-300 hover:text-white transition-colors px-3 py-2">
                 Contact
               </button>
@@ -115,6 +118,9 @@ const Navbar: React.FC<NavbarProps> = ({ user, onAuthClick, onDashboardClick, on
             </button>
             <button onClick={() => scrollToSection('about')} className="block text-slate-300 hover:text-white px-3 py-2 w-full text-left">
               About
+            </button>
+            <button onClick={() => scrollToSection('reviews')} className="block text-slate-300 hover:text-white px-3 py-2 w-full text-left">
+              Reviews
             </button>
             <button onClick={() => scrollToSection('contact')} className="block text-slate-300 hover:text-white px-3 py-2 w-full text-left">
               Contact
