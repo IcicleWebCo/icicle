@@ -39,38 +39,15 @@ export const portfolioProjects: PortfolioProject[] = [
     heroImage: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/bitkitekt/bitkitekt-hero.png',
     galleryImages: [
       { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/bitkitekt/bitkitekt-hero.png', caption: 'Bitkitekt Home Page', alt: 'Bitkitekt homepage' },
-      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/bitkitekt/bitkitekt-detail.png', caption: 'Admin Area', alt: 'Admin Area' },
-      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/bitkitekt/bitkitekt-stack.png', caption: 'Products', alt: 'Products' }
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/bitkitekt/bitkitekt-detail.png', caption: 'Post Detail', alt: 'Post Detail' },
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/bitkitekt/bitkitekt-stack.png', caption: 'Stack', alt: 'Stack' }
     ],
-    priceRange: '$750 - $1000',
+    priceRange: '$250 - $500',
     projectDuration: '3 weeks',
-    techStack: ['React', 'TypeScript', 'Stripe', 'Supabase', 'Vite', 'Tailwind CSS'],
-    liveUrl: 'https://www.lordsmithlamps.com',
+    techStack: ['Claude AI', 'React', 'TypeScript', 'Supabase', 'Vite', 'Tailwind CSS'],
+    liveUrl: 'https://www.bitkitekt.com',
     featured: true,
-    category: 'ecommerce',
-    gradient: 'from-amber-500/20 to-orange-500/20'
-  },
-  {
-    id: 'lordsmith-lamps',
-    title: 'Lord Smith Lamps',
-    subtitle: 'Luxury E-commerce Platform',
-    clientName: 'Lord Smith Lamps',
-    industry: 'E-commerce / Retail',
-    projectDate: '2025',
-    challenge: 'Lord Smith Lamps needed a sophisticated e-commerce platform to sell premium lighting products online with secure payment processing, inventory management, and customer account features.',
-    solution: 'Built a full-featured e-commerce site with Stripe integration for payments, Supabase for user authentication and data management, newsletter subscriptions, shipping management, and comprehensive analytics. The platform provides a seamless shopping experience with robust admin capabilities.',
-    heroImage: '/images/lordsmithhero.png',
-    galleryImages: [
-      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/lordsmithlamps/Hero.png', caption: 'Homepage Hero Section', alt: 'Lord Smith Lamps homepage' },
-      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/lordsmithlamps/Admin.png', caption: 'Admin Area', alt: 'Admin Area' },
-      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/lordsmithlamps/Shop.png', caption: 'Products', alt: 'Products' }
-    ],
-    priceRange: '$750 - $1000',
-    projectDuration: '3 weeks',
-    techStack: ['React', 'TypeScript', 'Stripe', 'Supabase', 'Vite', 'Tailwind CSS'],
-    liveUrl: 'https://www.lordsmithlamps.com',
-    featured: true,
-    category: 'ecommerce',
+    category: 'learning',
     gradient: 'from-amber-500/20 to-orange-500/20'
   },
   {
@@ -96,6 +73,29 @@ export const portfolioProjects: PortfolioProject[] = [
     featured: true,
     category: 'informational',
     gradient: 'from-red-500/20 to-orange-500/20'
+  },
+  {
+    id: 'lordsmith-lamps',
+    title: 'Lord Smith Lamps',
+    subtitle: 'Luxury E-commerce Platform',
+    clientName: 'Lord Smith Lamps',
+    industry: 'E-commerce / Retail',
+    projectDate: '2025',
+    challenge: 'Lord Smith Lamps needed a sophisticated e-commerce platform to sell premium lighting products online with secure payment processing, inventory management, and customer account features.',
+    solution: 'Built a full-featured e-commerce site with Stripe integration for payments, Supabase for user authentication and data management, newsletter subscriptions, shipping management, and comprehensive analytics. The platform provides a seamless shopping experience with robust admin capabilities.',
+    heroImage: '/images/lordsmithhero.png',
+    galleryImages: [
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/lordsmithlamps/Hero.png', caption: 'Homepage Hero Section', alt: 'Lord Smith Lamps homepage' },
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/lordsmithlamps/Admin.png', caption: 'Admin Area', alt: 'Admin Area' },
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/lordsmithlamps/Shop.png', caption: 'Products', alt: 'Products' }
+    ],
+    priceRange: '$750 - $1000',
+    projectDuration: '3 weeks',
+    techStack: ['React', 'TypeScript', 'Stripe', 'Supabase', 'Vite', 'Tailwind CSS'],
+    liveUrl: 'https://www.lordsmithlamps.com',
+    featured: true,
+    category: 'ecommerce',
+    gradient: 'from-amber-500/20 to-orange-500/20'
   }
   /*{
     id: 'homestead-haul',
