@@ -2,20 +2,29 @@ import React from 'react';
 import ContactForm from './contact/ContactForm';
 import ContactInfo from './contact/ContactInfo';
 import { ContactFormData } from '../types';
-import { supabase } from '../lib/supabase';
 
 const Contact: React.FC = () => {
   const handleFormSubmit = async (formData: ContactFormData) => {
-    const { error } = await supabase
-      .from('contact_submissions')
-      .insert({
-        name: formData.name,
-        email: formData.email,
-        message: formData.message
-      });
+    const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
 
-    if (error) {
-      throw new Error(error.message || 'Failed to send message');
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        to: 'support@iciclewebco.com',
+        from: formData.email,
+        subject: formData.name,
+        text: formData.message
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || 'Failed to send message');
     }
   };
 
