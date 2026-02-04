@@ -7,9 +7,10 @@ interface NavbarProps {
   onAuthClick: () => void;
   onDashboardClick: () => void;
   onSignOut: () => void;
+  showReviews?: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ user, onAuthClick, onDashboardClick, onSignOut }) => {
+const Navbar: React.FC<NavbarProps> = ({ user, onAuthClick, onDashboardClick, onSignOut, showReviews = true }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
@@ -60,9 +61,11 @@ const Navbar: React.FC<NavbarProps> = ({ user, onAuthClick, onDashboardClick, on
               <button onClick={() => scrollToSection('about')} className="text-slate-300 hover:text-white transition-colors px-3 py-2">
                 About
               </button>
-              <button onClick={() => scrollToSection('reviews')} className="text-slate-300 hover:text-white transition-colors px-3 py-2">
-                Reviews
-              </button>
+              {showReviews && (
+                <button onClick={() => scrollToSection('reviews')} className="text-slate-300 hover:text-white transition-colors px-3 py-2">
+                  Reviews
+                </button>
+              )}
               <button onClick={() => scrollToSection('contact')} className="text-slate-300 hover:text-white transition-colors px-3 py-2">
                 Contact
               </button>
@@ -119,9 +122,11 @@ const Navbar: React.FC<NavbarProps> = ({ user, onAuthClick, onDashboardClick, on
             <button onClick={() => scrollToSection('about')} className="block text-slate-300 hover:text-white px-3 py-2 w-full text-left">
               About
             </button>
-            <button onClick={() => scrollToSection('reviews')} className="block text-slate-300 hover:text-white px-3 py-2 w-full text-left">
-              Reviews
-            </button>
+            {showReviews && (
+              <button onClick={() => scrollToSection('reviews')} className="block text-slate-300 hover:text-white px-3 py-2 w-full text-left">
+                Reviews
+              </button>
+            )}
             <button onClick={() => scrollToSection('contact')} className="block text-slate-300 hover:text-white px-3 py-2 w-full text-left">
               Contact
             </button>

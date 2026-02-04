@@ -13,6 +13,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/shared/LoadingSpinner';
 import { FEATURE_FLAGS } from './config/features';
+import { useReviews } from './hooks/useReviews';
 
 const Dashboard = lazy(() => import('./components/Dashboard'));
 const AuthModal = lazy(() => import('./components/AuthModal'));
@@ -22,6 +23,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [showAuth, setShowAuth] = useState(false);
   const [showDashboard, setShowDashboard] = useState(false);
+  const { hasReviews } = useReviews();
 
   useEffect(() => {
     // Get initial session
@@ -75,6 +77,7 @@ function App() {
         onAuthClick={() => setShowAuth(true)}
         onDashboardClick={() => setShowDashboard(true)}
         onSignOut={handleSignOut}
+        showReviews={hasReviews}
       />
       <Hero />
       {FEATURE_FLAGS.enableSpecials && <Specials />}
@@ -82,7 +85,7 @@ function App() {
       <Portfolio />
       <Process />
       <About />
-      <Reviews />
+      {hasReviews && <Reviews />}
       <Contact />
       <Footer />
       
