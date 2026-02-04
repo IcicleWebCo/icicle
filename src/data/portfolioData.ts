@@ -61,9 +61,10 @@ export const portfolioProjects: PortfolioProject[] = [
     solution: 'Created a sleek single-page application with a dynamic, customizable menu system that the owner can update easily. The site features responsive design optimized for mobile ordering, integrated location map, and clear call-to-action for phone orders.',
     heroImage: '/images/eddyshero.png',
     galleryImages: [
-      { url: '/images/eddyshero.png', caption: 'Homepage Design', alt: "Eddy's Pizza homepage" },
-      { url: '/images/eddyshero.png', caption: 'Menu System', alt: 'Interactive menu display' },
-      { url: '/images/eddyshero.png', caption: 'Mobile View', alt: 'Mobile responsive design' }
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/eddys/eddys-hero.png', caption: 'Homepage Design', alt: "Eddy's Pizza homepage" },
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/eddys/eddys-menu.png', caption: 'Menu System', alt: 'Interactive menu display' },
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/eddys/eddys-contact.png', caption: 'Contact Page', alt: 'Contact Page' },
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/eddys/eddys-admin.png', caption: 'Admin Control Panel', alt: 'Admin Control Panel' }
     ],
     priceRange: '$200 - $400',
     projectDuration: '1 week',
