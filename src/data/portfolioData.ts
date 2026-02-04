@@ -73,7 +73,7 @@ export const portfolioProjects: PortfolioProject[] = [
     category: 'informational',
     gradient: 'from-red-500/20 to-orange-500/20'
   }
-  {/*{
+  /*{
     id: 'homestead-haul',
     title: 'Homestead Haul',
     subtitle: 'Courier Delivery Platform',
@@ -141,7 +141,7 @@ export const portfolioProjects: PortfolioProject[] = [
     featured: false,
     category: 'booking',
     gradient: 'from-slate-500/20 to-gray-500/20'
-  }*/}
+  }*/
 ];
 
 export const categories = [
