@@ -72,7 +72,7 @@ export const portfolioProjects: PortfolioProject[] = [
     featured: true,
     category: 'informational',
     gradient: 'from-red-500/20 to-orange-500/20'
-  },
+  }
   {/*{
     id: 'homestead-haul',
     title: 'Homestead Haul',
