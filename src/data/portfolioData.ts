@@ -28,6 +28,29 @@ export interface PortfolioProject {
 
 export const portfolioProjects: PortfolioProject[] = [
   {
+    id: 'bitkitekt',
+    title: 'Bitkitekt',
+    subtitle: 'Software Engineering Learning Nuggets',
+    clientName: 'Bitkitekt',
+    industry: 'Learning',
+    projectDate: '2025',
+    challenge: 'Bitkitekt needed an AI generated platform for learning software best practices and interview questions in multiple programming languages and frameworks.',
+    solution: 'Built a fully automated posting mechanism utilizing Claude AI for creating common and interesting software engineering code comparisons. Created a "stack" system for users to save posts to their account for later review.',
+    heroImage: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/bitkitekt/bitkitekt-hero.png',
+    galleryImages: [
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/bitkitekt/bitkitekt-hero.png', caption: 'Bitkitekt Home Page', alt: 'Bitkitekt homepage' },
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/bitkitekt/bitkitekt-detail.png', caption: 'Admin Area', alt: 'Admin Area' },
+      { url: 'https://mlugmenmvijmtyevwlmz.supabase.co/storage/v1/object/public/bitkitekt/bitkitekt-stack.png', caption: 'Products', alt: 'Products' }
+    ],
+    priceRange: '$750 - $1000',
+    projectDuration: '3 weeks',
+    techStack: ['React', 'TypeScript', 'Stripe', 'Supabase', 'Vite', 'Tailwind CSS'],
+    liveUrl: 'https://www.lordsmithlamps.com',
+    featured: true,
+    category: 'ecommerce',
+    gradient: 'from-amber-500/20 to-orange-500/20'
+  },
+  {
     id: 'lordsmith-lamps',
     title: 'Lord Smith Lamps',
     subtitle: 'Luxury E-commerce Platform',
