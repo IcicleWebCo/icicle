@@ -28,7 +28,7 @@ const About: React.FC = () => {
   ], []);
 
   return (
-    <section id="about" className="py-20 bg-slate-900">
+    <section id="about" className="py-20 bg-true-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -72,19 +72,19 @@ const About: React.FC = () => {
         {/* Team Stats */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-3 gap-8">
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-deep-blue-400 to-burnt-orange-400 bg-clip-text text-transparent mb-2">
               100+
             </div>
             <div className="text-slate-400">Projects Completed</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent mb-2">
+            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-burnt-orange-400 to-burnt-orange-500 bg-clip-text text-transparent mb-2">
               15+
             </div>
             <div className="text-slate-400">Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-2">
+            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-deep-blue-400 to-deep-blue-500 bg-clip-text text-transparent mb-2">
               24/7
             </div>
             <div className="text-slate-400">Support Available</div>

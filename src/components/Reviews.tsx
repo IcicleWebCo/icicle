@@ -95,7 +95,7 @@ const Reviews: React.FC = () => {
                 ? 'fill-yellow-400 text-yellow-400'
                 : index < rating
                 ? 'fill-yellow-400/50 text-yellow-400/50'
-                : 'fill-slate-700 text-slate-700'
+                : 'fill-charcoal text-charcoal'
             }`}
           />
         ))}
@@ -109,7 +109,7 @@ const Reviews: React.FC = () => {
 
   if (loading) {
     return (
-      <section id="reviews" className="py-20 bg-slate-900">
+      <section id="reviews" className="py-20 bg-true-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center py-20">
             <LoadingSpinner />
@@ -121,7 +121,7 @@ const Reviews: React.FC = () => {
 
   if (reviews.length === 0) {
     return (
-      <section id="reviews" className="py-20 bg-slate-900">
+      <section id="reviews" className="py-20 bg-true-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -154,10 +154,10 @@ const Reviews: React.FC = () => {
   const gridReviews = reviews.slice(0, 6);
 
   return (
-    <section id="reviews" className="py-20 bg-slate-900 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900/50 to-slate-900"></div>
-      <div className="absolute top-20 left-10 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+    <section id="reviews" className="py-20 bg-true-black relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-true-black via-true-black/50 to-true-black"></div>
+      <div className="absolute top-20 left-10 w-96 h-96 bg-deep-blue-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-burnt-orange-500/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
@@ -170,7 +170,7 @@ const Reviews: React.FC = () => {
 
           {settings && (
             <div className="flex flex-wrap justify-center gap-8 mb-8">
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl px-8 py-4">
+              <div className="bg-carbon/50 backdrop-blur-sm border border-charcoal rounded-xl px-8 py-4">
                 <div className="flex items-center gap-3 mb-2">
                   {renderStars(settings.average_rating)}
                   <span className="text-3xl font-bold text-white">
@@ -180,9 +180,9 @@ const Reviews: React.FC = () => {
                 <p className="text-slate-400 text-sm">Average Rating</p>
               </div>
 
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl px-8 py-4">
+              <div className="bg-carbon/50 backdrop-blur-sm border border-charcoal rounded-xl px-8 py-4">
                 <div className="flex items-center gap-3 mb-2">
-                  <Users className="h-8 w-8 text-blue-400" />
+                  <Users className="h-8 w-8 text-deep-blue-400" />
                   <span className="text-3xl font-bold text-white">
                     {settings.total_reviews}
                   </span>
@@ -190,9 +190,9 @@ const Reviews: React.FC = () => {
                 <p className="text-slate-400 text-sm">Total Reviews</p>
               </div>
 
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl px-8 py-4">
+              <div className="bg-carbon/50 backdrop-blur-sm border border-charcoal rounded-xl px-8 py-4">
                 <div className="flex items-center gap-3 mb-2">
-                  <TrendingUp className="h-8 w-8 text-emerald-400" />
+                  <TrendingUp className="h-8 w-8 text-burnt-orange-400" />
                   <span className="text-3xl font-bold text-white">
                     {reviews.filter(r => r.rating === 5).length}
                   </span>
@@ -221,7 +221,7 @@ const Reviews: React.FC = () => {
                     onClick={() => setFeaturedIndex(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       index === featuredIndex
-                        ? 'bg-gradient-to-r from-blue-500 to-purple-500 w-8'
+                        ? 'bg-gradient-to-r from-deep-blue-500 to-burnt-orange-500 w-8'
                         : 'bg-slate-600 hover:bg-slate-500'
                     }`}
                     aria-label={`View featured review ${index + 1}`}
@@ -249,7 +249,7 @@ const Reviews: React.FC = () => {
           <button
             onClick={handleSync}
             disabled={syncing}
-            className="bg-transparent border-2 border-slate-600 text-white px-8 py-4 rounded-lg font-semibold hover:border-slate-400 hover:bg-slate-800/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+            className="bg-transparent border-2 border-slate-600 text-white px-8 py-4 rounded-lg font-semibold hover:border-slate-400 hover:bg-carbon/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
           >
             <RefreshCw className={`h-5 w-5 mr-2 ${syncing ? 'animate-spin' : ''}`} />
             {syncing ? 'Syncing...' : 'Refresh Reviews'}

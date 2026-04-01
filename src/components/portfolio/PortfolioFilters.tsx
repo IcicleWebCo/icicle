@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, ShoppingCart, Calendar, FileText, Code, ChevronDown, X } from 'lucide-react';
+import { Grid2x2 as Grid, ShoppingCart, Calendar, FileText, Code, ChevronDown, X } from 'lucide-react';
 import { categories, priceRanges, industries, sortOptions } from '../../data/portfolioData';
 
 interface PortfolioFiltersProps {
@@ -50,7 +50,7 @@ const PortfolioFilters: React.FC<PortfolioFiltersProps> = ({
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
                     isActive
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                      : 'bg-slate-800 border border-slate-600 text-slate-300 hover:border-slate-500 hover:text-white'
+                      : 'bg-carbon border border-slate-600 text-slate-300 hover:border-slate-500 hover:text-white'
                   }`}
                 >
                   <IconComponent className="h-4 w-4" />
@@ -72,8 +72,8 @@ const PortfolioFilters: React.FC<PortfolioFiltersProps> = ({
                 onClick={() => onPriceRangeChange(range.id)}
                 className={`px-4 py-2 rounded-lg font-medium text-sm transition-all ${
                   isActive
-                    ? 'bg-emerald-600 text-white shadow-lg'
-                    : 'bg-slate-800 border border-slate-600 text-slate-300 hover:border-slate-500 hover:text-white'
+                    ? 'bg-burnt-orange-600 text-white shadow-lg'
+                    : 'bg-carbon border border-slate-600 text-slate-300 hover:border-slate-500 hover:text-white'
                 }`}
               >
                 {range.label}
@@ -87,7 +87,7 @@ const PortfolioFilters: React.FC<PortfolioFiltersProps> = ({
             <select
               value={selectedIndustry}
               onChange={(e) => onIndustryChange(e.target.value)}
-              className="appearance-none bg-slate-800 border border-slate-600 text-slate-300 px-4 py-2 pr-10 rounded-lg font-medium hover:border-slate-500 focus:outline-none focus:border-blue-500 cursor-pointer"
+              className="appearance-none bg-carbon border border-slate-600 text-slate-300 px-4 py-2 pr-10 rounded-lg font-medium hover:border-slate-500 focus:outline-none focus:border-burnt-orange-500 cursor-pointer"
             >
               {industries.map((industry) => (
                 <option key={industry} value={industry}>
@@ -102,7 +102,7 @@ const PortfolioFilters: React.FC<PortfolioFiltersProps> = ({
             <select
               value={selectedSort}
               onChange={(e) => onSortChange(e.target.value)}
-              className="appearance-none bg-slate-800 border border-slate-600 text-slate-300 px-4 py-2 pr-10 rounded-lg font-medium hover:border-slate-500 focus:outline-none focus:border-blue-500 cursor-pointer"
+              className="appearance-none bg-carbon border border-slate-600 text-slate-300 px-4 py-2 pr-10 rounded-lg font-medium hover:border-slate-500 focus:outline-none focus:border-burnt-orange-500 cursor-pointer"
             >
               {sortOptions.map((option) => (
                 <option key={option.id} value={option.id}>
@@ -126,17 +126,17 @@ const PortfolioFilters: React.FC<PortfolioFiltersProps> = ({
           </button>
           <div className="text-sm text-slate-500">
             {selectedCategory !== 'all' && (
-              <span className="mr-2 px-2 py-1 bg-slate-800 rounded text-slate-300">
+              <span className="mr-2 px-2 py-1 bg-carbon rounded text-slate-300">
                 {categories.find(c => c.id === selectedCategory)?.name}
               </span>
             )}
             {selectedPriceRange !== 'all' && (
-              <span className="mr-2 px-2 py-1 bg-slate-800 rounded text-slate-300">
+              <span className="mr-2 px-2 py-1 bg-carbon rounded text-slate-300">
                 {priceRanges.find(r => r.id === selectedPriceRange)?.label}
               </span>
             )}
             {selectedIndustry !== 'All Industries' && (
-              <span className="mr-2 px-2 py-1 bg-slate-800 rounded text-slate-300">
+              <span className="mr-2 px-2 py-1 bg-carbon rounded text-slate-300">
                 {selectedIndustry}
               </span>
             )}

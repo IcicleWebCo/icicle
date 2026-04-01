@@ -38,7 +38,7 @@ const ProcessStepCard: React.FC<ProcessStepCardProps> = ({ step, index }) => {
       </div>
 
       <div className="hidden lg:flex w-2/12 justify-center">
-        <div className={`w-6 h-6 bg-gradient-to-r ${step.color} rounded-full border-4 border-slate-800 shadow-lg`}></div>
+        <div className={`w-6 h-6 bg-gradient-to-r ${step.color} rounded-full border-4 border-deep-black shadow-lg`}></div>
       </div>
 
       <div className="hidden lg:block w-5/12"></div>

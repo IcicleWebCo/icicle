@@ -10,11 +10,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   return (
     <div
       className={`group relative ${CARD_STYLES.base} p-8 ${CARD_STYLES.hover} ${
-        service.isNew ? 'border-cyan-500/50 shadow-cyan-500/20 shadow-lg' : ''
+        service.isNew ? 'border-burnt-orange-500/50 shadow-burnt-orange-500/20 shadow-lg' : ''
       }`}
     >
       {service.isNew && (
-        <div className="absolute -top-3 -right-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+        <div className="absolute -top-3 -right-3 bg-gradient-to-r from-burnt-orange-500 to-burnt-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
           NEW
         </div>
       )}
@@ -38,7 +38,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         <ul className="mt-4 space-y-2">
           {service.bullets.map((bullet, idx) => (
             <li key={idx} className="flex items-center text-slate-300">
-              <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
+              <span className="w-1.5 h-1.5 bg-burnt-orange-400 rounded-full mr-2"></span>
               {bullet}
             </li>
           ))}

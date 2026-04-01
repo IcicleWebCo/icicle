@@ -96,7 +96,7 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <section id="portfolio" className="py-20 bg-slate-900" ref={sectionRef}>
+    <section id="portfolio" className="py-20 bg-true-black" ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -133,7 +133,7 @@ const Portfolio: React.FC = () => {
             <div className="text-center">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-deep-blue-600 to-burnt-orange-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-deep-blue-700 hover:to-burnt-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-burnt-orange-500/30"
               >
                 Start Your Project Today
               </button>

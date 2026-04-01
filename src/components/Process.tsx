@@ -53,7 +53,7 @@ const Process: React.FC = () => {
   ], []);
 
   return (
-    <section id="process" className="py-20 bg-slate-800">
+    <section id="process" className="py-20 bg-deep-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -66,7 +66,7 @@ const Process: React.FC = () => {
         </div>
 
         <div className="relative">
-          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-purple-500 to-emerald-500"></div>
+          <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-deep-blue-500 via-burnt-orange-400 to-burnt-orange-500"></div>
 
           <div className="space-y-12 lg:space-y-16">
             {steps.map((step, index) => (

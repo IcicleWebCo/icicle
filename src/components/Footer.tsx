@@ -14,10 +14,10 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-800">
+    <footer className="bg-true-black border-t border-charcoal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back to Top Button */}
-        <div className="flex justify-center py-8 border-b border-slate-800">
+        <div className="flex justify-center py-8 border-b border-charcoal">
           <button
             onClick={scrollToTop}
             className="group flex items-center space-x-2 text-slate-400 hover:text-white transition-colors"
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="mb-4">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-deep-blue-400 to-burnt-orange-400 bg-clip-text text-transparent">
                 Icicle Web Co.
               </span>
             </div>
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on Facebook"
-                className="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-carbon hover:bg-burnt-orange-500 rounded-lg flex items-center justify-center transition-colors"
               >
                 <span className="text-white font-semibold" aria-hidden="true">f</span>
               </a>
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on Instagram"
-                className="w-10 h-10 bg-slate-800 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-carbon hover:bg-burnt-orange-500 rounded-lg flex items-center justify-center transition-colors"
               >
                 <span className="text-white font-semibold" aria-hidden="true">ig</span>
               </a>
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on LinkedIn"
-                className="w-10 h-10 bg-slate-800 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-carbon hover:bg-burnt-orange-500 rounded-lg flex items-center justify-center transition-colors"
               >
                 <span className="text-white font-semibold" aria-hidden="true">in</span>
               </a>
@@ -128,7 +128,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="py-6 border-t border-charcoal flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <img id="logo" src="./images/IcicleLogoTransparent.svg" alt="Icicle Logo" class="w-auto h-16"/>
           <p className="text-slate-400 text-sm">
             © 2024 Icicle Web Co. All rights reserved.

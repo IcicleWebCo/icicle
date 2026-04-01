@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="min-h-screen relative flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900/50 to-purple-900/50 overflow-hidden">
+    <section className="min-h-screen relative flex items-center justify-center bg-gradient-to-br from-true-black via-deep-blue-900/50 to-deep-black overflow-hidden">
       {/* Snowflakes */}
       {FEATURE_FLAGS.enableSnowflakes && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -44,9 +44,9 @@ const Hero: React.FC = () => {
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-deep-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-burnt-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-burnt-orange-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
@@ -54,10 +54,10 @@ const Hero: React.FC = () => {
         {FEATURE_FLAGS.enableSpecials && (
           <button
             onClick={handleSpecialsClick}
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-full px-6 py-2 mb-6 backdrop-blur-sm hover:from-emerald-500/30 hover:to-cyan-500/30 transition-all duration-300 cursor-pointer group"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-burnt-orange-500/20 to-burnt-orange-600/20 border border-burnt-orange-400/30 rounded-full px-6 py-2 mb-6 backdrop-blur-sm hover:from-burnt-orange-500/30 hover:to-burnt-orange-600/30 transition-all duration-300 cursor-pointer group"
           >
-            <Sparkles className="h-4 w-4 text-emerald-400 group-hover:scale-110 transition-transform" />
-            <span className="text-emerald-200 font-semibold">Limited Time Offer: Get 10% Off!</span>
+            <Sparkles className="h-4 w-4 text-burnt-orange-400 group-hover:scale-110 transition-transform" />
+            <span className="text-burnt-orange-200 font-semibold">Limited Time Offer: Get 10% Off!</span>
           </button>
         )}
 
