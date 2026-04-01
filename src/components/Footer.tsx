@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="mb-4">
-              <span className="text-2xl font-bold bg-gradient-to-r from-deep-blue-400 to-burnt-orange-400 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-deep-blue-400 to-deep-blue-300 bg-clip-text text-transparent">
                 Icicle Web Co.
               </span>
             </div>
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on Facebook"
-                className="w-10 h-10 bg-carbon hover:bg-burnt-orange-500 rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-carbon hover:bg-deep-blue-600 rounded-lg flex items-center justify-center transition-colors"
               >
                 <span className="text-white font-semibold" aria-hidden="true">f</span>
               </a>
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on Instagram"
-                className="w-10 h-10 bg-carbon hover:bg-burnt-orange-500 rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-carbon hover:bg-deep-blue-600 rounded-lg flex items-center justify-center transition-colors"
               >
                 <span className="text-white font-semibold" aria-hidden="true">ig</span>
               </a>
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow us on LinkedIn"
-                className="w-10 h-10 bg-carbon hover:bg-burnt-orange-500 rounded-lg flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-carbon hover:bg-deep-blue-600 rounded-lg flex items-center justify-center transition-colors"
               >
                 <span className="text-white font-semibold" aria-hidden="true">in</span>
               </a>

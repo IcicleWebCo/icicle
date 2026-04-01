@@ -157,7 +157,7 @@ const Reviews: React.FC = () => {
     <section id="reviews" className="py-20 bg-true-black relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-true-black via-true-black/50 to-true-black"></div>
       <div className="absolute top-20 left-10 w-96 h-96 bg-deep-blue-500/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-burnt-orange-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-deep-blue-600/5 rounded-full blur-3xl"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
@@ -192,7 +192,7 @@ const Reviews: React.FC = () => {
 
               <div className="bg-carbon/50 backdrop-blur-sm border border-charcoal rounded-xl px-8 py-4">
                 <div className="flex items-center gap-3 mb-2">
-                  <TrendingUp className="h-8 w-8 text-burnt-orange-400" />
+                  <TrendingUp className="h-8 w-8 text-deep-blue-400" />
                   <span className="text-3xl font-bold text-white">
                     {reviews.filter(r => r.rating === 5).length}
                   </span>
@@ -221,7 +221,7 @@ const Reviews: React.FC = () => {
                     onClick={() => setFeaturedIndex(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       index === featuredIndex
-                        ? 'bg-gradient-to-r from-deep-blue-500 to-burnt-orange-500 w-8'
+                        ? 'bg-deep-blue-500 w-8'
                         : 'bg-slate-600 hover:bg-slate-500'
                     }`}
                     aria-label={`View featured review ${index + 1}`}

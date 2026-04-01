@@ -40,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({ user, onAuthClick, onDashboardClick, on
                 alt="Icicle Logo"
                 className="h-8 w-auto sm:h-10 md:h-12 group-hover:scale-105 transition-transform duration-200"
               />
-              <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-deep-blue-400 to-burnt-orange-400 bg-clip-text text-transparent group-hover:from-deep-blue-300 group-hover:to-burnt-orange-300 transition-all duration-200">
+              <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-deep-blue-400 to-deep-blue-300 bg-clip-text text-transparent group-hover:from-deep-blue-300 group-hover:to-deep-blue-200 transition-all duration-200">
                 Icicle Web Co.
               </span>
             </button>

@@ -15,7 +15,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails }) => 
 
   return (
     <div
-      className="group relative bg-carbon/50 backdrop-blur-sm border border-charcoal rounded-2xl overflow-hidden hover:bg-carbon/80 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-burnt-orange-500/10"
+      className="group relative bg-carbon/50 backdrop-blur-sm border border-charcoal rounded-2xl overflow-hidden hover:bg-carbon/80 transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-deep-blue-500/20"
     >
       {project.featured && (
         <div className="absolute top-4 left-4 z-10 bg-gradient-to-r from-burnt-orange-400 to-burnt-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
@@ -36,7 +36,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails }) => 
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-white mb-1 group-hover:text-burnt-orange-400 transition-colors">
+            <h3 className="text-xl font-bold text-white mb-1 group-hover:text-deep-blue-400 transition-colors">
               {project.title}
             </h3>
             <p className="text-sm text-deep-blue-400 font-medium">{project.subtitle}</p>
@@ -44,9 +44,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails }) => 
         </div>
 
         <div className="flex items-center gap-3 mb-4 flex-wrap">
-          <div className="bg-gradient-to-r from-burnt-orange-500/20 to-burnt-orange-600/20 border border-burnt-orange-500/30 rounded-lg px-4 py-2">
+          <div className="bg-deep-blue-900/30 border border-deep-blue-600/30 rounded-lg px-4 py-2">
             <div className="text-xs text-slate-400 mb-1">Investment Range</div>
-            <div className="text-lg font-bold text-burnt-orange-400">{project.priceRange}</div>
+            <div className="text-lg font-bold text-deep-blue-300">{project.priceRange}</div>
           </div>
           <button
             onClick={onViewDetails}

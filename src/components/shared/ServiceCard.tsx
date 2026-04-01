@@ -38,7 +38,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         <ul className="mt-4 space-y-2">
           {service.bullets.map((bullet, idx) => (
             <li key={idx} className="flex items-center text-slate-300">
-              <span className="w-1.5 h-1.5 bg-burnt-orange-400 rounded-full mr-2"></span>
+              <span className="w-1.5 h-1.5 bg-deep-blue-400 rounded-full mr-2"></span>
               {bullet}
             </li>
           ))}

@@ -100,7 +100,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
                     onClick={() => setSelectedImage(index)}
                     className={`relative rounded-lg overflow-hidden border-2 transition-all bg-deep-black ${
                       selectedImage === index
-                        ? 'border-burnt-orange-500 ring-2 ring-burnt-orange-500/50'
+                        ? 'border-deep-blue-500 ring-2 ring-deep-blue-500/50'
                         : 'border-charcoal hover:border-slate-500'
                     }`}
                   >
@@ -115,12 +115,12 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
             </div>
 
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-burnt-orange-500/10 to-burnt-orange-600/10 border border-burnt-orange-500/30 rounded-xl p-6">
+              <div className="bg-deep-blue-900/20 border border-deep-blue-600/30 rounded-xl p-6">
                 <div className="text-sm text-slate-400 mb-2">Investment Range</div>
-                <div className="text-3xl font-bold text-burnt-orange-400 mb-4">{project.priceRange}</div>
+                <div className="text-3xl font-bold text-deep-blue-300 mb-4">{project.priceRange}</div>
                 <button
                   onClick={handleStartProject}
-                  className="w-full bg-gradient-to-r from-deep-blue-600 to-burnt-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-deep-blue-700 hover:to-burnt-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-burnt-orange-500/30"
+                  className="w-full bg-deep-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-deep-blue-700 hover:ring-2 hover:ring-burnt-orange-500/30 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-deep-blue-500/40"
                 >
                   Start Similar Project
                 </button>
@@ -135,7 +135,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
                   </div>
                 </div>
                 <div className="flex items-center gap-3 text-slate-300">
-                  <Clock className="h-5 w-5 text-burnt-orange-400" />
+                  <Clock className="h-5 w-5 text-deep-blue-400" />
                   <div>
                     <div className="text-xs text-slate-500">Timeline</div>
                     <div className="font-semibold">{project.projectDuration}</div>
@@ -165,7 +165,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
             <div className="bg-carbon/30 border border-charcoal rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <div className="w-1 h-6 bg-gradient-to-b from-burnt-orange-500 to-burnt-orange-600 rounded-full"></div>
+                <div className="w-1 h-6 bg-deep-blue-500 rounded-full"></div>
                 The Challenge
               </h3>
               <p className="text-slate-300 leading-relaxed">{project.challenge}</p>
@@ -173,7 +173,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
 
             <div className="bg-carbon/30 border border-charcoal rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <div className="w-1 h-6 bg-gradient-to-b from-deep-blue-500 to-deep-blue-600 rounded-full"></div>
+                <div className="w-1 h-6 bg-deep-blue-600 rounded-full"></div>
                 The Solution
               </h3>
               <p className="text-slate-300 leading-relaxed">{project.solution}</p>
@@ -181,7 +181,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
           </div>
 
           {project.testimonial && (
-            <div className="mb-8 bg-gradient-to-br from-deep-blue-500/10 to-burnt-orange-500/10 border border-deep-blue-500/30 rounded-xl p-8">
+            <div className="mb-8 bg-deep-blue-900/20 border border-deep-blue-500/30 rounded-xl p-8">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(project.testimonial.rating)].map((_, i) => (
                   <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
@@ -201,7 +201,7 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
               {project.techStack.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-4 py-2 bg-carbon border border-slate-600 text-slate-200 text-sm rounded-lg font-medium hover:border-burnt-orange-500/50 transition-all"
+                  className="px-4 py-2 bg-carbon border border-slate-600 text-slate-200 text-sm rounded-lg font-medium hover:border-deep-blue-500/50 transition-all"
                 >
                   {tech}
                 </span>
@@ -209,14 +209,14 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-deep-blue-600/20 to-burnt-orange-600/20 border border-deep-blue-500/30 rounded-xl p-8 text-center">
+          <div className="bg-deep-blue-900/20 border border-deep-blue-500/30 rounded-xl p-8 text-center">
             <h3 className="text-2xl font-bold text-white mb-3">Ready to Start Your Project?</h3>
             <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
               Let's create something amazing together. Get in touch to discuss your project requirements and receive a custom quote.
             </p>
             <button
               onClick={handleStartProject}
-              className="bg-gradient-to-r from-deep-blue-600 to-burnt-orange-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-deep-blue-700 hover:to-burnt-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-burnt-orange-500/30"
+              className="bg-deep-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-deep-blue-700 hover:ring-2 hover:ring-burnt-orange-500/30 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-deep-blue-500/40"
             >
               Get Started Today
             </button>

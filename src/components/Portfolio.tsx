@@ -133,7 +133,7 @@ const Portfolio: React.FC = () => {
             <div className="text-center">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="bg-gradient-to-r from-deep-blue-600 to-burnt-orange-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-deep-blue-700 hover:to-burnt-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-burnt-orange-500/30"
+                className="bg-deep-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-deep-blue-700 hover:ring-2 hover:ring-burnt-orange-500/30 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-deep-blue-500/40"
               >
                 Start Your Project Today
               </button>

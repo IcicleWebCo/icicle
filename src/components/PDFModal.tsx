@@ -47,7 +47,7 @@ const PDFModal: React.FC<PDFModalProps> = ({ isOpen, onClose, pdfUrl, title }) =
               href={pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+              className="bg-deep-blue-600 hover:bg-deep-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
             >
               Open in New Tab
             </a>
