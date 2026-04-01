@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { X, ExternalLink, Calendar, Clock, DollarSign, Star, TrendingUp, Zap, Package, Smartphone, RefreshCw, Heart, ShoppingBag, Users, Truck, CheckCircle, UserCheck, Grid2x2 as Grid } from 'lucide-react';
+import React, { useState, useEffect, useMemo } from 'react';
+import { X, ExternalLink, Calendar, Clock, DollarSign, Star, TrendingUp, Zap, Package, Smartphone, RefreshCw, Heart, ShoppingBag, Users, Truck, CheckCircle, UserCheck, Grid2x2 as Grid, ChevronRight } from 'lucide-react';
 import { PortfolioProject } from '../../types';
 import { scrollToSection } from '../../utils/navigation';
+import { portfolioProjects } from '../../data/portfolioData';
 
 interface ProjectDetailModalProps {
   project: PortfolioProject;
@@ -29,6 +30,17 @@ const iconMap: Record<string, React.FC<{ className?: string }>> = {
 
 const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClose }) => {
   const [selectedImage, setSelectedImage] = useState(0);
+
+  const relatedProjects = useMemo(() => {
+    return portfolioProjects
+      .filter(p => p.id !== project.id)
+      .filter(p =>
+        p.category === project.category ||
+        p.industry === project.industry ||
+        p.techStack.some(tech => project.techStack.includes(tech))
+      )
+      .slice(0, 3);
+  }, [project]);
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -208,6 +220,43 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
               ))}
             </div>
           </div>
+
+          {relatedProjects.length > 0 && (
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-white mb-6">Related Projects</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {relatedProjects.map((relatedProject) => (
+                  <div
+                    key={relatedProject.id}
+                    className="group bg-carbon/30 border border-charcoal rounded-xl overflow-hidden hover:border-deep-blue-500/50 transition-all cursor-pointer"
+                    onClick={() => window.location.hash = `#portfolio/${relatedProject.id}`}
+                  >
+                    <div className="relative h-40 overflow-hidden bg-deep-black">
+                      <img
+                        src={relatedProject.heroImage}
+                        alt={relatedProject.title}
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h4 className="text-white font-semibold mb-2 group-hover:text-deep-blue-400 transition-colors flex items-center justify-between">
+                        {relatedProject.title}
+                        <ChevronRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </h4>
+                      <p className="text-slate-400 text-sm line-clamp-2">{relatedProject.subtitle}</p>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {relatedProject.techStack.slice(0, 3).map((tech, idx) => (
+                          <span key={idx} className="text-xs px-2 py-1 bg-charcoal/50 text-slate-300 rounded">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="bg-deep-blue-900/20 border border-deep-blue-500/30 rounded-xl p-8 text-center">
             <h3 className="text-2xl font-bold text-white mb-3">Ready to Start Your Project?</h3>

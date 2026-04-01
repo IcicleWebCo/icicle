@@ -1,6 +1,8 @@
 import React from 'react';
+import { ExternalLink } from 'lucide-react';
 import { Service } from '../../types';
 import { CARD_STYLES } from '../../constants/theme';
+import { scrollToSection } from '../../utils/navigation';
 
 interface ServiceCardProps {
   service: Service;
@@ -43,6 +45,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
             </li>
           ))}
         </ul>
+      )}
+
+      {service.portfolioCategory && (
+        <button
+          onClick={() => scrollToSection('portfolio')}
+          className="mt-6 flex items-center space-x-2 text-deep-blue-400 hover:text-deep-blue-300 transition-colors text-sm font-semibold group/link"
+        >
+          <ExternalLink className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
+          <span>{service.portfolioLabel || 'View Examples'}</span>
+        </button>
       )}
 
       <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-300`}></div>

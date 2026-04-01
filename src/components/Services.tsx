@@ -12,37 +12,49 @@ const Services: React.FC = () => {
       icon: <Palette className="h-8 w-8" />,
       title: "Small Business Web Design",
       description: "Custom website design tailored for small businesses. Mobile-responsive, user-friendly interfaces that convert visitors into customers.",
-      color: GRADIENTS.cyan
+      color: GRADIENTS.cyan,
+      portfolioCategory: 'informational',
+      portfolioLabel: 'View Website Examples'
     },
     {
       icon: <Code className="h-8 w-8" />,
       title: "Custom Web Development",
       description: "Full-stack web development using modern technologies. No money down options available to help your business get online affordably.",
-      color: GRADIENTS.purple
+      color: GRADIENTS.purple,
+      portfolioCategory: 'all',
+      portfolioLabel: 'Browse All Projects'
     },
     {
       icon: <ShoppingCart className="h-8 w-8" />,
       title: "E-commerce Solutions",
       description: "Complete e-commerce platforms with inventory management, payment processing, and order fulfillment systems for online sales.",
-      color: GRADIENTS.emerald
+      color: GRADIENTS.emerald,
+      portfolioCategory: 'ecommerce',
+      portfolioLabel: 'See E-commerce Examples'
     },
     {
       icon: <Server className="h-8 w-8" />,
       title: "API Development Services",
       description: "Custom API development and backend systems to connect your applications, automate workflows, and integrate third-party services.",
-      color: GRADIENTS.orange
+      color: GRADIENTS.orange,
+      portfolioCategory: 'custom',
+      portfolioLabel: 'View Technical Projects'
     },
     {
       icon: <Shield className="h-8 w-8" />,
       title: "Custom Database Solutions",
       description: "Scalable database design and management for customer data, inventory tracking, and business analytics.",
-      color: GRADIENTS.indigo
+      color: GRADIENTS.indigo,
+      portfolioCategory: 'custom',
+      portfolioLabel: 'View Database Projects'
     },
     {
       icon: <Headphones className="h-8 w-8" />,
       title: "Booking & Scheduling Systems",
       description: "Automated booking systems with calendar integration, payment processing, and customer management for service-based businesses.",
-      color: GRADIENTS.pink
+      color: GRADIENTS.pink,
+      portfolioCategory: 'booking',
+      portfolioLabel: 'See Booking System Examples'
     },
     {
       icon: <Share2 className="h-8 w-8" />,

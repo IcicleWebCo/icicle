@@ -5,6 +5,8 @@ export interface Service {
   color: string;
   isNew?: boolean;
   bullets?: string[];
+  portfolioCategory?: string;
+  portfolioLabel?: string;
 }
 
 export interface ProcessStep {

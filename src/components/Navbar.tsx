@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, User, LogOut } from 'lucide-react';
 import { User as SupabaseUser } from '@supabase/supabase-js';
+import { useActiveSection } from '../hooks/useActiveSection';
 
 interface NavbarProps {
   user: SupabaseUser | null;
@@ -12,6 +13,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ user, onAuthClick, onDashboardClick, onSignOut, showReviews = true }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const activeSection = useActiveSection(['hero', 'services', 'portfolio', 'process', 'about', 'reviews', 'contact']);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -49,25 +51,61 @@ const Navbar: React.FC<NavbarProps> = ({ user, onAuthClick, onDashboardClick, on
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <button onClick={() => scrollToSection('services')} className="text-slate-300 hover:text-white transition-colors px-3 py-2">
+              <button
+                onClick={() => scrollToSection('services')}
+                className={`transition-colors px-3 py-2 relative ${activeSection === 'services' ? 'text-white' : 'text-slate-300 hover:text-white'}`}
+              >
                 Services
+                {activeSection === 'services' && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-deep-blue-500"></span>
+                )}
               </button>
-              <button onClick={() => scrollToSection('portfolio')} className="text-slate-300 hover:text-white transition-colors px-3 py-2">
+              <button
+                onClick={() => scrollToSection('portfolio')}
+                className={`transition-colors px-3 py-2 relative ${activeSection === 'portfolio' ? 'text-white' : 'text-slate-300 hover:text-white'}`}
+              >
                 Portfolio
+                {activeSection === 'portfolio' && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-deep-blue-500"></span>
+                )}
               </button>
-              <button onClick={() => scrollToSection('process')} className="text-slate-300 hover:text-white transition-colors px-3 py-2">
+              <button
+                onClick={() => scrollToSection('process')}
+                className={`transition-colors px-3 py-2 relative ${activeSection === 'process' ? 'text-white' : 'text-slate-300 hover:text-white'}`}
+              >
                 Process
+                {activeSection === 'process' && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-deep-blue-500"></span>
+                )}
               </button>
-              <button onClick={() => scrollToSection('about')} className="text-slate-300 hover:text-white transition-colors px-3 py-2">
+              <button
+                onClick={() => scrollToSection('about')}
+                className={`transition-colors px-3 py-2 relative ${activeSection === 'about' ? 'text-white' : 'text-slate-300 hover:text-white'}`}
+              >
                 About
+                {activeSection === 'about' && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-deep-blue-500"></span>
+                )}
               </button>
               {showReviews && (
-                <button onClick={() => scrollToSection('reviews')} className="text-slate-300 hover:text-white transition-colors px-3 py-2">
+                <button
+                  onClick={() => scrollToSection('reviews')}
+                  className={`transition-colors px-3 py-2 relative ${activeSection === 'reviews' ? 'text-white' : 'text-slate-300 hover:text-white'}`}
+                >
                   Reviews
+                  {activeSection === 'reviews' && (
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-deep-blue-500"></span>
+                  )}
                 </button>
               )}
-              <button onClick={() => scrollToSection('contact')} className="text-slate-300 hover:text-white transition-colors px-3 py-2">
+              <button
+                onClick={() => scrollToSection('contact')}
+                className={`transition-colors px-3 py-2 relative ${activeSection === 'contact' ? 'text-white' : 'text-slate-300 hover:text-white'}`}
+              >
                 Contact
+                {activeSection === 'contact' && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-deep-blue-500"></span>
+                )}
               </button>
             </div>
           </div>

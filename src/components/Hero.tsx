@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="min-h-screen relative flex items-center justify-center bg-gradient-to-br from-true-black via-deep-blue-900/50 to-deep-black overflow-hidden">
+    <section id="hero" className="min-h-screen relative flex items-center justify-center bg-gradient-to-br from-true-black via-deep-blue-900/50 to-deep-black overflow-hidden">
       {/* Snowflakes */}
       {FEATURE_FLAGS.enableSnowflakes && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
