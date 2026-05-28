@@ -54,13 +54,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails }) => 
           >
             <span>View Details</span>
           </button>
-          <button
-            onClick={handleVisitSite}
-            className="flex items-center space-x-2 bg-charcoal hover:bg-slate-600 text-white px-4 py-2 rounded-lg font-semibold transition-all border border-slate-600"
-          >
-            <ExternalLink className="h-4 w-4" />
-            <span>Live Site</span>
-          </button>
+          {project.liveUrl && (
+            <button
+              onClick={handleVisitSite}
+              className="flex items-center space-x-2 bg-charcoal hover:bg-slate-600 text-white px-4 py-2 rounded-lg font-semibold transition-all border border-slate-600"
+            >
+              <ExternalLink className="h-4 w-4" />
+              <span>Live Site</span>
+            </button>
+          )}
         </div>
 
         <p className="text-slate-400 mb-4 leading-relaxed line-clamp-2 group-hover:text-slate-300 transition-colors">

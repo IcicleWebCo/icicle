@@ -45,7 +45,7 @@ export const portfolioProjects: PortfolioProject[] = [
     priceRange: '$250 - $500',
     projectDuration: '3 weeks',
     techStack: ['Claude AI', 'React', 'TypeScript', 'Supabase', 'Vite', 'Tailwind CSS'],
-    liveUrl: 'https://www.bitkitekt.com',
+    liveUrl: '',
     featured: true,
     category: 'learning',
     gradient: 'from-amber-500/20 to-orange-500/20'

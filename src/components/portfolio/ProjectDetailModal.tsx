@@ -162,15 +162,17 @@ const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project, onClos
                 </div>
               </div>
 
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full bg-carbon border border-slate-600 hover:border-slate-500 text-white px-6 py-3 rounded-lg font-semibold transition-all"
-              >
-                <ExternalLink className="h-4 w-4" />
-                View Live Website
-              </a>
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full bg-carbon border border-slate-600 hover:border-slate-500 text-white px-6 py-3 rounded-lg font-semibold transition-all"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  View Live Website
+                </a>
+              )}
             </div>
           </div>
 
